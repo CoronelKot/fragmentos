@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">fragmentos</string>
+    <string name="app_name">MaterialDesign</string>
+    <string name="menu_close_app">Cerrar</string>
+    <string name="menu_about">Acerca de...</string>
+    <string name="about">
+        Esta aplicaci\u00F3n fue creada con prop\u00F3sitos educacionales
+        para la materia de Programaci\u00F3n de Dispositivos M\u00F3viles.\n\n
+        Desarrollada por:\n
+        -<u>C\u00E9sar Padilla Coronel</u>\n
+        -<u>Fernando Romero Cruz</u>\n
+        -<u>Pablo C\u00E9sar Navarro Santana</u>\n
+        -<u>Jorge Eduardo Garc\u00EDa Serrano</u>\n\n
+e
+        Versi\u00F3n: <!-->Colocar numero de version al finalizar la practica<!-->\t
+        Publicaci\u00F3n: XX Mar. 2025
+    </string>
+    <string name="ok">OK</string>
+    <string name="contenido_lista1">Entrada 1</string>
+    <string name="contenido_lista2">Entrada 2</string>
+    <string name="contenido_lista3">Entrada 3</string>
+    <string name="contenido_lista4">Entrada 4</string>
+    <string name="contenido_lista5">Entrada 5</string>
+
+    <string name="add_to_list_button">Agregar elemento</string>
+
+    <string name="infinite_list_entry_message">Mensaje %1$d</string>
+
+    <string name="second_activity_launcher_button">Lista infinita</string>
 </resources>
