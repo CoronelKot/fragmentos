@@ -35,6 +35,8 @@ dependencies {
     implementation libs.activity
     implementation libs.constraintlayout
     implementation'androidx.fragment:fragment:1.8.6'
+    implementation'androidx.preference:preference-ktx:1.2.1'
+    implementation libs.preference
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core

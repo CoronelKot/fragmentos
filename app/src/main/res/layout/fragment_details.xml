@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/entry_title_tv"/>
     <View
+        android:id="@+id/color_view"
         android:layout_width="@dimen/color_size"
         android:layout_height="@dimen/color_size"/>
     <TextView

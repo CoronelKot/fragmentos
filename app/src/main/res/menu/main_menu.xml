@@ -11,5 +11,10 @@
         android:icon="@android:drawable/ic_menu_close_clear_cancel"
         android:title="@string/menu_close_app"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@android:drawable/ic_menu_more"
+        android:title="@string/menu_settings"
+        app:showAsACtion="ifRoom"/>
 
 </menu>

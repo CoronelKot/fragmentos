@@ -47,7 +47,7 @@ public class DetailsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = rootView = inflater.inflate(R.layout.fragment_details,container,false);
-        View colorView = rootView.findViewById(R.id.red_value_tv);
+        View colorView = rootView.findViewById(R.id.color_view);
         TextView red = rootView.findViewById(R.id.red_value_tv);
         TextView green = rootView.findViewById(R.id.green_value_tv);
         TextView blue = rootView.findViewById(R.id.blue_value_tv);

@@ -2,6 +2,7 @@
     <string name="app_name">MaterialDesign</string>
     <string name="menu_close_app">Cerrar</string>
     <string name="menu_about">Acerca de...</string>
+    <string name="menu_settings">Ajustes</string>
     <string name="about">
         Esta aplicaci\u00F3n fue creada con prop\u00F3sitos educacionales
         para la materia de Programaci\u00F3n de Dispositivos M\u00F3viles.\n\n
@@ -28,4 +29,21 @@ e
     <string name="red_color_component">Rojo: %1$f f - %2$d</string>
     <string name="green_color_component">Verde %1$f f - %2$d</string>
     <string name="blue_color_component">Azul: %1$f f - %2$d</string>
+    <string name="theme_preference_key" translatable="false">
+        mx.unam.fciencias.fragmentos.THEME_PREFERENCE_KEY
+    </string>
+    <string name="enable_transitions_preference_key" translatable="false">
+        mx.unam.fciencias.fragmentos.ENABLE_TRANSITIONS_PREFERENCE_KEY
+    </string>
+    <string name="light_theme_preference_id">
+        mx.unam.fciencias.fragmentos.LIGHT_THEME
+    </string>
+    <string name="dark_theme_preference_id">
+        mx.unam.fciencias.fragmentos.DARK_THEME
+    </string>
+    <string name="preferences_general_section_title">Preferencias</string>
+    <string name="theme_preference_options_title">Tema de la aplicación</string>
+    <string name="theme_preference_option_summary">Elija entre un tema claro u obscuro</string>
+    <string name="transition_preference_option_title">Animaciones de transición</string>
+    <string name="transition_preference_option_summary">Active o desactive las animaciones</string>
 </resources>
