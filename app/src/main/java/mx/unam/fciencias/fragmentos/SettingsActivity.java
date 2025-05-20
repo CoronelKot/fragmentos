@@ -4,6 +4,7 @@ import static androidx.core.graphics.drawable.DrawableCompat.applyTheme;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -22,6 +23,8 @@ public class SettingsActivity extends MainMenuActivity implements SharedPreferen
         themePreferenceKey = getString(R.string.theme_preference_key);
         applyTheme(sharedPreferences.getString(
                 themePreferenceKey, lightThemeId), false);
+        getSupportFragmentManager().beginTransaction()
+                .add(android.R.id.content, new SettingsFragment()).commit();
     }
     @Override
     protected void onResume(){

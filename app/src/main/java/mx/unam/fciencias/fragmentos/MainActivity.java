@@ -14,7 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.preference.PreferenceManager;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends MainMenuActivity {
     private  Button launchSecondActivityButton;
     private String sharedViewTransitionName;
     @Override
@@ -33,11 +33,13 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         if(sharedViewTransitionName == null){
-            sharedViewTransitionName = "botonCompartido";
+            sharedViewTransitionName = getString(R.string.second_activity_launcher_button);
         }
         ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
                 this,launchSecondActivityButton,sharedViewTransitionName
         );
+
+        resultLauncher.launch(intent, options);
     }
 
 }

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,6 +19,10 @@ public class SecondActivity extends MainMenuActivity implements InfiniteListAdap
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
         setContentView(R.layout.activity_second);
         Button button = findViewById(R.id.add_to_list_button);
         button.setOnClickListener(this::addListElement);
@@ -42,20 +47,21 @@ public class SecondActivity extends MainMenuActivity implements InfiniteListAdap
     }
     @Override
     public void onItemClicked(int clickItemIndex,String entryText,int masterListSize){
-        if (isDetailsPaneAvailable){
+        if (isDetailsPaneAvailable) {
             Bundle detailFragmentArgs = new Bundle();
-            detailFragmentArgs.putInt(DetailsFragment.INDEX_KEY,clickItemIndex);
-            detailFragmentArgs.putInt(DetailsFragment.MASTER_LIST_SIZE_KEY,masterListSize);
+            detailFragmentArgs.putInt(DetailsFragment.INDEX_KEY, clickItemIndex);
+            detailFragmentArgs.putInt(DetailsFragment.MASTER_LIST_SIZE_KEY, masterListSize);
             DetailsFragment detailsFragment = new DetailsFragment();
             detailsFragment.setArguments(detailFragmentArgs);
             getSupportFragmentManager().beginTransaction().replace(
-                    R.id.color_detail_holder,detailsFragment
+                    R.id.color_detail_holder, detailsFragment
             ).commit();
-        }else{
-            Intent intent = new Intent(this,DetailActivity.class);
-            intent.putExtra(DetailsFragment.INDEX_KEY,clickItemIndex);
-            intent.putExtra(DetailActivity.ENTRY_MESSAGE_KEY,entryText);
-            intent.putExtra(DetailsFragment.MASTER_LIST_SIZE_KEY,clickItemIndex);
+        } else {
+            Intent intent = new Intent(this, DetailActivity.class);
+            intent.putExtra(DetailsFragment.INDEX_KEY, clickItemIndex);
+            intent.putExtra(DetailActivity.ENTRY_MESSAGE_KEY, entryText);
+            intent.putExtra(DetailsFragment.MASTER_LIST_SIZE_KEY, masterListSize);
+            startActivity(intent);
         }
     }
 }
