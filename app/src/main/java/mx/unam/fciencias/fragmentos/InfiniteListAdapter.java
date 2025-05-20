@@ -61,9 +61,8 @@ public class InfiniteListAdapter extends RecyclerView.Adapter<InfiniteListAdapte
         }
         @Override
         public void onClick(View view){
-            CLICK_HANDLER.onItemClicked(
-                    getBindingAdapterPosition(),
-                    entryText.getText().toString(), DATASET.size());
+            CLICK_HANDLER.onItemClicked(getBindingAdapterPosition(), entryText.getText().toString(),
+                    DATASET.size());
         }
     }
     public interface MasterListItemClickHandler{

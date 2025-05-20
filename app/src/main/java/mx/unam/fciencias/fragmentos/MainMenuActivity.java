@@ -32,7 +32,7 @@ public class MainMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         lightThemeId= getString(R.string.light_theme_preference_id);
         themePreferenceKey = getString(R.string.theme_preference_key);
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         applyTheme(sharedPreferences.getString(themePreferenceKey,lightThemeId),false);
     }
 
@@ -58,7 +58,7 @@ public class MainMenuActivity extends AppCompatActivity {
                                     );
                                     if (getPackageManager().getActivityInfo(
                                             getComponentName(),0
-                                    ).getThemeResourse() == selectedTheme){
+                                    ).getThemeResource() == selectedTheme){
                                         return;
                                     }
                                     setTheme(selectedTheme);
@@ -76,7 +76,6 @@ public class MainMenuActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
-        int intId = item.getItemId();
         if (itemId == R.id.menu_about) {
             AlertDialog.Builder alertDialogBuilder =
                     new AlertDialog.Builder(this);
@@ -97,10 +96,9 @@ public class MainMenuActivity extends AppCompatActivity {
             startActivity(new Intent(this,SettingsActivity.class));
             return true;
         }
-        if(intId == android.R.id.home){
+        if(itemId == android.R.id.home){
             NavUtils.navigateUpFromSameTask(this);
         }
-        resultLauncher.launch(new Intent(this, SecondActivity.class));
         return super.onOptionsItemSelected(item);
     }
     @Override
